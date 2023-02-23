@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matomo.Xamarin.Forms", "Matomo.Xamarin.Forms\Matomo.Xamarin.Forms.csproj", "{63993FAD-75D7-41B3-91A7-85674A9AA8C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{19E86890-717B-4F65-B9E6-34D7A786BD74}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63993FAD-75D7-41B3-91A7-85674A9AA8C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63993FAD-75D7-41B3-91A7-85674A9AA8C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63993FAD-75D7-41B3-91A7-85674A9AA8C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63993FAD-75D7-41B3-91A7-85674A9AA8C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE1D6B92-B877-49A0-B2C1-F99FF7AD512D}
+	EndGlobalSection
+EndGlobal
