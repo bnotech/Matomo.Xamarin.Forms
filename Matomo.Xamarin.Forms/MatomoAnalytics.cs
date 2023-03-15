@@ -21,7 +21,7 @@ namespace Matomo.Xamarin.Forms
             {
                 if (string.IsNullOrEmpty(_userAgent))
                 {
-                    _userAgent = $"Mozilla/5.0 ({DeviceInfo.Platform} {DeviceInfo.VersionString}; {DeviceInfo.Manufacturer} {DeviceInfo.Model})";
+                    _userAgent = $"Mozilla/5.0 ({DeviceInfo.Model}; {DeviceInfo.Platform} {DeviceInfo.VersionString}) {AppInfo.Name}/{AppInfo.VersionString}";
                 }
                 return _userAgent;
             }
@@ -248,6 +248,7 @@ namespace Matomo.Xamarin.Forms
             parameters["cdt"] = (DateTimeOffset.UtcNow.ToUnixTimeSeconds()).ToString(); // TODO dispatching cdt older thant 24 h needs token_auth in bulk request
             parameters["lang"] = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
             parameters["ua"] = UserAgent;
+            parameters["res"] = $"{DeviceDisplay.MainDisplayInfo.Width}x{DeviceDisplay.MainDisplayInfo.Height}";
 
             foreach (var dimension in Dimensions)
                 parameters[$"dimension{dimension.Id}"] = dimension.Value;
