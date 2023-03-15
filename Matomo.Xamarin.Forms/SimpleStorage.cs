@@ -70,9 +70,12 @@ namespace Matomo.Xamarin.Forms
 
 		private void ReadFromDisk()
 		{
-			if (File.Exists($"{_filename}.json"))
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) ?? "";
+			var filepath = Path.Combine(path, $"{_filename}.json");
+
+            if (File.Exists(filepath))
 			{
-				using (TextReader file = File.OpenText($"{_filename}.json"))
+				using (TextReader file = File.OpenText(filepath))
 				{
 					var json = file.ReadToEnd();
 					_data = (Dictionary<string, object>)JsonConvert.DeserializeObject(json);
@@ -82,7 +85,10 @@ namespace Matomo.Xamarin.Forms
 
 		private void WriteToDisk()
 		{
-            using (StreamWriter file = File.CreateText($"{_filename}.json"))
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) ?? "";
+            var filepath = Path.Combine(path, $"{_filename}.json");
+
+            using (StreamWriter file = File.CreateText(filepath))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, _data);
