@@ -16,7 +16,7 @@ Getting started with Matomo.Xamarin.Forms is pretty easy:
 
 ```
 private static object _matomoSyncRoot = new object();
-rivate static MatomoAnalytics _matomoAnalytics;
+private static MatomoAnalytics _matomoAnalytics;
 public static MatomoAnalytics MatomoAnalytics
 {
     get
